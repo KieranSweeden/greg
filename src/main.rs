@@ -10,9 +10,6 @@ fn main() {
         process::exit(1); // more user-friendly method of exiting program (compared to panic)
     });
 
-    println!("Searching for {}", config.query);
-    println!("In file {}", config.file_path);
-
     if let Err(e) = greg::run(config) {
         println!("Application error: {e}");
         process::exit(1);
